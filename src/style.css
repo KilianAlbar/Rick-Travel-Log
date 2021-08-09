@@ -1,46 +1,92 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Open+Sans+Condensed:wght@300&display=swap');
+
+/* =============== VARIABLE =============== */
+
+:root {
+  /* color */
+  --first-color: #16ACC9;
+  --first-color-darker: #143F48;
+  --second-color: #D2DA4B;
+  --second-color-flashy: #42ca20;
+  --text-color: #F8F7FF;
+  --container-color: #9998A3;
+
+  /* fonts */
+
+  --title-font: 'Nunito', sans-serif;
+  --text-font: 'Open Sans Condensed', sans-serif;
+
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .831rem;
+  --smaller-font-size: .75rem;
+
+  --spacing-font: 0.5px;
+  
+  /* margin top */ 
+  --mt-0-25: .25rem;
+  --mt-0-5: .5rem;
+  --mt-0-75: .75rem;
+  --mt-1: 1rem;
+  --mt-1-5: 1.5rem;
+  --mt-2: 2rem;
+  --mt-2-5: 2.5rem;
+  --mt-3: 3rem;
+
+  /* z index */ 
+  --z-tooltip: 10 ;
+  --z-fixed: 100 ;
+  --z-modal: 1000 ;
+}
+
+/* =============== BASE =============== */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: arial, helvetica;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  list-style: none;
 }
 
-h3 {
-  font-size: 5em;
-  text-align: center;
-  color: #fff;
-  font-weight: 700;
+a {
+  text-decoration: none;
 }
 
-#section1 {
-  color: #fff;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.fp-section {
-  text-align: center;
-}
 
-button {
-  padding: 0.93em 1.87em;
-  background: #35495e;
-  border-radius: 5px;
-  border-color: transparent;
-  display: block;
-  color: #fff;
-  margin: 0 auto;
-  cursor: pointer;
-  font-size: 0.85em;
-}
+/* =============== PAGE ID =============== */
+
 
 #slide1 {
-  background-image: url(./img/test.jpg);
+  background-image: url(./img/background.png);
+  background-size: cover;
+}
+
+#slide2 {
+  background-image: url(./img/background.png);
+  background-size: cover;
+}
+
+#slide3 {
+  background-image: url(./img/background.png);
+  background-size: cover;
+}
+
+#slide4 {
+  background-image: url(./img/background.png);
+  background-size: cover;
+}
+
+#slide5 {
+  background-image: url(./img/background.png);
   background-size: cover;
 }

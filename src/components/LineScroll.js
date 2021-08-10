@@ -1,5 +1,5 @@
 import React from 'react'
-import './lineScroll.css'
+import '../css/lineScroll.css'
 
 const LineScroll = () =>  {
     return (<>

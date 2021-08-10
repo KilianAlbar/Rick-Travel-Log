@@ -1,7 +1,7 @@
 /* =============== CLASSES =============== */
 
 .holderButton {
-    height: 200px;
+    height: 100px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -23,6 +23,7 @@
 .button:hover {
     animation: hoverNavbar 3s linear infinite;
 }
+
 
 @keyframes hoverNavbar {
     0% {

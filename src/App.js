@@ -2,9 +2,10 @@ import React from "react"
 import "fullpage.js/vendors/scrolloverflow";
 import ReactFullpage from "@fullpage/react-fullpage";
 import './style.css';
-import BodyHome from "./Home.js";
-import Navbar from "./Navbar"
-import LineScroll from "./LineScroll.js";
+import BodyHome from "./components/Home.js";
+import Navbar from "./components/Navbar"
+import LineScroll from "./components/LineScroll.js";
+
 
 class FullpageWrapper extends React.Component {
   onLeave(origin, destination, direction) {

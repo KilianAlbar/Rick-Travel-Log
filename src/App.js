@@ -2,6 +2,10 @@ import React from "react"
 import "fullpage.js/vendors/scrolloverflow";
 import ReactFullpage from "@fullpage/react-fullpage";
 import './style.css';
+import BodyHome from "./components/Home.js";
+import Navbar from "./components/Navbar"
+import LineScroll from "./components/LineScroll.js";
+
 
 class FullpageWrapper extends React.Component {
   onLeave(origin, destination, direction) {
@@ -19,25 +23,24 @@ class FullpageWrapper extends React.Component {
         render={({ state, fullpageApi }) => {
           return (
             <div id="fullpage-wrapper">
-              <div className="section section1">
-                <h3>Section 1</h3>
+              <div id="slide1" className="section section1">
+                <Navbar />
+                <BodyHome />
+                <LineScroll />
               </div>
               <div className="section">
-                <div id="slide1" className="slide">
+                <div id="slide2" className="slide">
                   <h3>Slide 2.1</h3>
                 </div>
-                <div className="slide">
+                <div id="slide3" className="slide">
                   <h3>Slide 2.2</h3>
                 </div>
-                <div className="slide">
+                <div id="slide4" className="slide">
                   <h3>Slide 2.3</h3>
                 </div>
               </div>
-              <div className="section">
+              <div id="slide5" className="section">
                 <h3>Section 3</h3>
-                <button onClick={() => fullpageApi.moveTo(1, 0)}>
-                  Move top
-                </button>
               </div>
             </div>
           );

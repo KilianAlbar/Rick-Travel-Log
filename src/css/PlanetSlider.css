@@ -1,0 +1,23 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.planetSlide{
+    width: 60%;
+    margin: 10rem auto;
+}
+
+.otherSlide img{
+    width: 20rem;
+    margin: 0 auto;
+}
+
+.otherSlide{
+    transform: scale(0.4);
+    transition: transform 1000ms;
+    opacity: 0.5;
+}
+
+.activeSlide{
+    transform: scale(1.1);
+    opacity:1;
+}

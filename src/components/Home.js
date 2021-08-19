@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/home.css'
-import ricksTravel from '../img/rickstravel.png'
+import ricksTravel from '../assets/rickstravel.png'
 
 const BodyHome = () => {
     return (

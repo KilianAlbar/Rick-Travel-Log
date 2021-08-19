@@ -7,6 +7,7 @@
     flex-direction: row;
     justify-content: space-around;
     position: absolute;
+    flex-wrap: wrap;
     top: 0%;
     z-index: var(--z-tooltip);
 }
@@ -24,6 +25,16 @@
     animation: hoverNavbar 3s linear infinite;
 }
 
+/* =============== QUERIES =============== */
+
+@media screen and (max-width:1024px) {
+    .button {
+        padding: var(--mt-1-5);
+    }
+}
+
+
+/* =============== KEYFRAMES =============== */
 
 @keyframes hoverNavbar {
     0% {

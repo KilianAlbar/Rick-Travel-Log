@@ -36,7 +36,7 @@
     text-shadow: 0.5px solid black;
     background: linear-gradient(to bottom, #1de502, rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
     transform: rotateZ(10deg) translate(-10em, 2.5em);
-    animation: sheen 1.5s forwards infinite;
+    animation: sheen 1s forwards infinite;
 }
 
 @keyframes sheen {

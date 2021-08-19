@@ -19,3 +19,27 @@
     font-size: var(--h3-font-size);
     letter-spacing: var(--spacing-font);
 }
+
+/* =============== QUERIES =============== */
+
+@media screen and (max-width: 1024px) {
+    .containerHolder {
+        top: 20%;
+        right: 0%;
+        width: 650px;
+    }
+    .containerResume {
+        font-size: var(--h1-font-size);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .containerHolder {
+        top: 25%;
+        right: -10%;
+        width: 350px;
+    }
+    .containerResume {
+        font-size: var(--h2-font-size);
+    }
+}

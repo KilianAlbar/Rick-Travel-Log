@@ -3,9 +3,12 @@ import "fullpage.js/vendors/scrolloverflow";
 import ReactFullpage from "@fullpage/react-fullpage";
 import './style.css';
 import BodyHome from "./components/Home.js";
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar";
 import LineScroll from "./components/LineScroll.js";
-
+import RickAnim from './components/RickSanchez.js';
+import './css/rickSanchez.css';
+import RickSanchez from './img/rickSanchez.png';
+import textAreaBasic from './img/bulleText.png'
 
 class FullpageWrapper extends React.Component {
   onLeave(origin, destination, direction) {
@@ -26,6 +29,7 @@ class FullpageWrapper extends React.Component {
               <div id="slide1" className="section section1">
                 <Navbar />
                 <BodyHome />
+                <RickAnim rickAnimation="rickFromLeft" rickImage={RickSanchez} rickTextArea={textAreaBasic} rickSay="Best website ever seen ! Blurp !" />
                 <LineScroll />
               </div>
               <div className="section">

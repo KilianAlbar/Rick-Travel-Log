@@ -7,8 +7,8 @@ import Navbar from "./components/Navbar";
 import LineScroll from "./components/LineScroll.js";
 import RickAnim from './components/RickSanchez.js';
 import './css/rickSanchez.css';
-import RickSanchez from './img/rickSanchez.png';
-import textAreaBasic from './img/bulleText.png'
+import rickSanchez from './assets/rickSanchez.png';
+import textAreaBasic from './assets/bulleText.png'
 import PlanetSlider from "./components/PlanetSlider";
 import './css/PlanetSlider.css';
 
@@ -31,7 +31,7 @@ class FullpageWrapper extends React.Component {
               <div id="slide1" className="section section1">
                 <Navbar />
                 <BodyHome />
-                <RickAnim rickAnimation="rickFromLeft" rickImage={RickSanchez} rickTextArea={textAreaBasic} rickSay="Best website ever seen ! Blurp !" />
+                <RickAnim rickAnimation="rickFromLeft" rickImage={rickSanchez} rickTextArea={textAreaBasic} rickSay="Best website ever seen ! Blurp !" />
                 <LineScroll />
               </div>
               <div className="section">

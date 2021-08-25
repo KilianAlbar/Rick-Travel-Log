@@ -49,6 +49,9 @@ class FullpageWrapper extends React.Component {
               <div id="slide5" className="section">
                 <h3>Section 3</h3>
               </div>
+              <div id="slide6" className="section">
+                <h3>Section 3</h3>
+              </div>
             </div>
           );
         }}

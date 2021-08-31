@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: right;
     position: absolute;
-    top: 25%;
+    top: 15%;
     right: 13%;
     margin: var(--mt-3);
     z-index: var(--z-tooltip);
@@ -18,6 +18,108 @@
     font-family: var(--text-font);
     font-size: var(--h3-font-size);
     letter-spacing: var(--spacing-font);
+}
+
+.buttonRandom {
+    align-self: flex-end;
+    background-color: var(--second-color-flashy);
+    margin-top: var(--mt-3);
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-family: var(--text-font);
+    letter-spacing: 1.3px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-size: var(--title-font);
+    width: 250px;
+    cursor: pointer;
+    box-shadow: 1px 3px 13px 0px #D2DA4B;
+}
+
+.holderInterface {
+    opacity: 0;
+    position: absolute;
+    padding: 2%;
+    z-index: 101;
+    right: 40%;
+    top: 15%;
+    width: 600px;
+    height: 380px;
+    background-color: black;
+    border-radius: 25px;
+    border: 1px solid gray;
+    animation: interfaceAppear 0.5s ease-in-out forwards;
+}
+
+.holderHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.interfaceEpisode {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nameEpisode {
+    font-family: var(--title-font);
+    font-size: var(--h2-font-size);
+    color: var(--text-color);
+}
+
+.dateEpisode {
+    font-family: var(--text-font);
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+}
+
+.holderButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.resumeEpisode {
+    margin-top: var(--mt-2);
+    font-family: var(--text-font);
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+}
+
+.redirectionImage {
+    margin-top: var(--mt-0-25);
+    border: 1px solid grey;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.refreshButton {
+    margin-top: var(--mt-0-25);
+    background-color: var(--second-color-flashy);
+    margin-top: var(--mt-3);
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-family: var(--text-font);
+    letter-spacing: 1.3px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-size: var(--title-font);
+    width: 198px;
+    height: 52px;
+    cursor: pointer;
+    box-shadow: 1px 3px 13px 0px #D2DA4B;
+}
+
+.closeButton {
+    cursor: pointer;
 }
 
 /* =============== QUERIES =============== */
@@ -41,5 +143,25 @@
     }
     .containerResume {
         font-size: var(--h2-font-size);
+    }
+}
+
+/* =============== KEYFRAMES =============== */
+
+@keyframes interfaceAppear {
+    0% {
+        opacity: 0.2;
+    }
+    25% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    75% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.95;
     }
 }

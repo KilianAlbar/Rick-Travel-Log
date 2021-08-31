@@ -9,7 +9,6 @@ import RickAnim from './components/RickSanchez.js';
 import './css/rickSanchez.css';
 import rickSanchez from './assets/rickSanchez.png';
 import textAreaBasic from './assets/bulleText.png'
-import PlanetSlider from "./components/PlanetSlider";
 import './css/PlanetSlider.css';
 
 class FullpageWrapper extends React.Component {
@@ -37,7 +36,6 @@ class FullpageWrapper extends React.Component {
               <div className="section">
                 <div id="slide2" className="slide">
                   <h3>Slide 2.1</h3>
-                <PlanetSlider/>
                 </div>
                 <div id="slide3" className="slide">
                   <h3>Slide 2.2</h3>
@@ -47,7 +45,8 @@ class FullpageWrapper extends React.Component {
                 </div>
               </div>
               <div id="slide5" className="section">
-                <h3>Section 3</h3>
+                <div className="cardBattle">
+                </div>
               </div>
               <div id="slide6" className="section">
                 <h3>Section 3</h3>

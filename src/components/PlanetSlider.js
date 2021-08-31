@@ -14,7 +14,7 @@ function PlanetSlider(){
 
     const NextArrow = ({onClick}) => {
         return(
-            <div className="arrowNext" onCLick={onClick}>
+            <div className="arrowNext" onClick={onClick}>
                 <span>RIGHT</span>
             </div>
         )
@@ -22,7 +22,7 @@ function PlanetSlider(){
     
     const PrevArrow = ({onClick}) => {
         return(
-            <div className="arrowPrev" onCLick={onClick}>
+            <div className="arrowPrev" onClick={onClick}>
                 <span>LEFT</span>
             </div>
         )

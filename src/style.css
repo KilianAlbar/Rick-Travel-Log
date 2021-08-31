@@ -125,3 +125,25 @@ img {
   background-image: url(./assets/background.png);
   background-size: cover;
 }
+
+.testDiv {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+}
+
+.test {
+  font-size: 26px;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.cardBattle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

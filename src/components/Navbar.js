@@ -18,13 +18,13 @@ const Navbar = () => {
 
         window.addEventListener('resize', handleResize)
 
-        return _ => {
+        return  _ => {
             window.removeEventListener('resize', handleResize)
         }
     })
 
-    return (<>
-        { dimensions.width > 1000 &&
+    return (<div>
+        { dimensions.width > 480 &&
             <div className="holderButton">
             <div className="button">
                 <p>HOME</p>
@@ -40,7 +40,7 @@ const Navbar = () => {
             </div>
         </div>
     } 
-    { dimensions.width <= 1000 &&
+    { dimensions.width <= 480 &&
         <label for="check">
             <input type="checkbox" id="check"/> 
             <span></span>
@@ -48,7 +48,7 @@ const Navbar = () => {
             <span></span>
         </label>
     }
-    </>)
+    </div>)
 
 
 }

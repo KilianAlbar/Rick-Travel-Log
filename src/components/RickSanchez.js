@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/rickSanchez.css'
 
 const RickAnim = (props) => {
 
-    let windowSize = window.innerWidth;
+    const [dimensions, setDimensions] = useState({
+        height: window.innerHeight,
+        width: window.innerWidth
+    })
 
-    if(windowSize > 480) {
-        return (
+    useEffect(() => {
+        function handleResize () {
+            setDimensions({
+                height: window.innerHeight,
+                width: window.innerWidth
+            })
+
+    }
+
+        window.addEventListener('resize', handleResize)
+
+        return  _ => {
+            window.removeEventListener('resize', handleResize)
+        }
+    })
+
+    return (<div>
+        { dimensions.width > 480 &&
             <div className={props.rickAnimation}>
                 <img className="rickFromLeftScreen" src={props.rickImage} alt="picture of Rick Sanchez" />
                 <div>
@@ -14,11 +33,10 @@ const RickAnim = (props) => {
                     <p className="textSay">{props.rickSay}</p>
                 </div>
             </div>
-        )
-    } else if (windowSize <= 480) {
-        return null
-    }
+        }
 
+
+    </div>)
 
 }
 

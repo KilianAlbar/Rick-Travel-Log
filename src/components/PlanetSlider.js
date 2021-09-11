@@ -1,60 +1,66 @@
-import {useState} from "react";
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
-import planet1 from "../assets/planet1.png";
-import planet2 from "../assets/planet2.png";
-import planet3 from "../assets/planet3.png";
-import planet4 from "../assets/planet4.png";
-import planet5 from "../assets/planet5.png";
-import planet6 from "../assets/planet6.png";
-import planet7 from "../assets/planet7.png";
+import { PlanetsData } from "../datas/PlanetsData";
 
-const planets = [planet1,planet2,planet3,planet4,planet5,planet6,planet7]
+
 
 function PlanetSlider(){
 
-    const NextArrow = ({onClick}) => {
-        return(
-            <div className="arrowNext" onClick={onClick}>
-                <span>RIGHT</span>
-            </div>
-        )
-    }
-    
-    const PrevArrow = ({onClick}) => {
-        return(
-            <div className="arrowPrev" onClick={onClick}>
-                <span>LEFT</span>
-            </div>
-        )
-    }
 
     const [imageIndex, setImageIndex] = useState(0)
+    const [rickLocations, setRickLocations] = useState(null) 
+    
+    useEffect(() => {
 
+        let arrayLocations =[];
+    
+        for(let i = 0; i < PlanetsData.length; i++){
+            fetch("https://rickandmortyapi.com/api/location/"+PlanetsData[i].id)
+            .then((resp) => resp.json())
+            .then((data) => {let tempObject = 
+                {
+                    id: data.id,
+                    planetImg : PlanetsData[i].planetImg,
+                    name: data.name,
+                    residents: data.residents,
+                    url: data.url,
+                    landscapeImg: PlanetsData[i].landscapeImg
 
+                };
+
+                arrayLocations.push(tempObject);
+
+                if(arrayLocations.length === PlanetsData.length){
+                    setRickLocations(arrayLocations);
+                }
+            })
+        }
+
+    },[])
 
     const settings ={
         infinite:true,
         lazyLoad:true,
-        speed:300,
-        slidesToShow:5,
+        speed:100,
+        slidesToShow:3,
         centerMode:true,
         centerPadding:0,
-        nextArrow:<NextArrow/>,
-        prevArrow:<PrevArrow/>,
         beforeChange: (current, next) => setImageIndex(next)
     };
 
-
-
     return(
         <div className="planetSlide">
-        <Slider {...settings}>
-            {planets.map((img, index) =>(
-                <div className={index === imageIndex ? "activeSlide" : "otherSlide"}>
-                    <img src={img} alt={img}/>
-                </div>
-            ))}
-        </Slider>
+            <Slider {...settings}> 
+                {
+                    rickLocations != null &&
+                        rickLocations.map((img, index) =>{
+                            return (
+                                <div className={index === imageIndex ? "activeSlide" : "otherSlide"}>
+                                    <img onClick={() => console.log(img.url)} src={img.planetImg} alt={img.name}/>
+                                </div>
+                            )  
+                })}
+            </Slider>
         </div>
     )
 }

@@ -10,6 +10,10 @@ import './css/rickSanchez.css';
 import rickSanchez from './assets/rickSanchez.png';
 import textAreaBasic from './assets/bulleText.png'
 import './css/PlanetSlider.css';
+import PlanetSlider from './components/PlanetSlider.js';
+import PlanetDetails from './components/PlanetDetails.js';
+
+
 
 class FullpageWrapper extends React.Component {
   onLeave(origin, destination, direction) {
@@ -36,9 +40,11 @@ class FullpageWrapper extends React.Component {
               <div className="section">
                 <div id="slide2" className="slide">
                   <h3>Slide 2.1</h3>
+                  <PlanetSlider/>
                 </div>
                 <div id="slide3" className="slide">
                   <h3>Slide 2.2</h3>
+                  <PlanetDetails/>
                 </div>
                 <div id="slide4" className="slide">
                   <h3>Slide 2.3</h3>

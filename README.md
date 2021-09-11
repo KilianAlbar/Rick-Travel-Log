@@ -3,6 +3,14 @@ Projet 2 - Site React + API
 
 ================================================================
 
+11/09/2021 
+
+- PlanetSlider désormais 100% fonctionnel et relié à l'API
+- Creation d'une PlanetsData qui permet d'ajouter des images pour les exploiter avec l'API 
+- Ajout du composant PlanetDetails qui regroupera les informations des planets via le PlanetSlider
+
+================================================================
+
 18/08/2021
 
 - Ajout composants PlanetSlider

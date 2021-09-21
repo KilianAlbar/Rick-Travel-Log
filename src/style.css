@@ -141,9 +141,3 @@ button {
   cursor: pointer;
   z-index: 1000;
 }
-
-.cardBattle {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}

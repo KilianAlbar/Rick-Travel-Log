@@ -1,18 +1,26 @@
 import React from "react"
+
+/* Library */
 import "fullpage.js/vendors/scrolloverflow";
 import ReactFullpage from "@fullpage/react-fullpage";
-import './style.css';
+
+/* Components */
 import BodyHome from "./components/Home.js";
 import Navbar from "./components/Navbar";
 import LineScroll from "./components/LineScroll.js";
 import RickAnim from './components/RickSanchez.js';
-import './css/rickSanchez.css';
-import rickSanchez from './assets/rickSanchez.png';
-import textAreaBasic from './assets/bulleText.png'
-import './css/PlanetSlider.css';
-import AlienLovers from "./components/FindLove.js";
+import TinderRick from "./components/TinderRick.js";
 import PlanetSlider from './components/PlanetSlider.js';
 import PlanetDetails from './components/PlanetDetails.js';
+
+/* Style */
+import './style.css';
+import './css/rickSanchez.css';
+
+/* Assets */
+import rickSanchez from './assets/rickSanchez.png';
+import textAreaBasic from './assets/bulleText.png'
+
 
 class FullpageWrapper extends React.Component {
 
@@ -47,19 +55,19 @@ class FullpageWrapper extends React.Component {
               <div className="section">
                 <div id="slide2" className="slide">
                   <h3>Slide 2.1</h3>
-                  <PlanetSlider/>
+                  <PlanetSlider />
                 </div>
                 <div id="slide3" className="slide">
                   <h3>Slide 2.2</h3>
-                  <PlanetDetails/>
+                  <PlanetDetails />
                 </div>
                 <div id="slide4" className="slide">
                   <h3>Slide 2.3</h3>
                 </div>
               </div>
-              <div onPointerEnter={() => this.setState({ classState: this.state.classState = "imgAnim"})} id="slide5" className="section">
+              <div id="slide5" className="section">
                 <Navbar />
-                <AlienLovers anim={this.state.setState}/>
+                <TinderRick />
                 <LineScroll />
               </div>
               <div id="slide6" className="section">

@@ -17,7 +17,7 @@ const BodyHome = () => {
             setDimensions({
                 height: window.innerHeight,
                 width: window.innerWidth
-            })
+            }) 
 
     }
 
@@ -66,7 +66,7 @@ const BodyHome = () => {
 
 
             </div>
-             <div className='buttonRandom' onClick={ () => getEpisode() }>Get new aventure</div>
+             <div className='buttonRandom' onClick={ () => getEpisode() }><p>Get new aventure</p></div>
              {
                  episode != null &&
                  <div className="holderInterface">

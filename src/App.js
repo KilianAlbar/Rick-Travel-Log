@@ -10,8 +10,17 @@ import './css/rickSanchez.css';
 import rickSanchez from './assets/rickSanchez.png';
 import textAreaBasic from './assets/bulleText.png'
 import './css/PlanetSlider.css';
+import AlienLovers from "./components/FindLove.js";
 
 class FullpageWrapper extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      classState : "imgAnim"
+    };
+  }
+
   onLeave(origin, destination, direction) {
     console.log("Leaving section " + origin.index);
   }
@@ -44,9 +53,10 @@ class FullpageWrapper extends React.Component {
                   <h3>Slide 2.3</h3>
                 </div>
               </div>
-              <div id="slide5" className="section">
-                <div className="cardBattle">
-                </div>
+              <div onPointerEnter={() => this.setState({ classState: this.state.classState = "imgAnim"})} id="slide5" className="section">
+                <Navbar />
+                <AlienLovers anim={this.state.setState}/>
+                <LineScroll />
               </div>
               <div id="slide6" className="section">
                 <h3>Section 3</h3>

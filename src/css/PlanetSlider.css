@@ -103,3 +103,13 @@
 .inactivePage:hover{
         animation: hoverNavbar 3s linear infinite;
 }
+
+@media screen and (max-width: 1024px){
+    .planetName {
+        font: var(--text-font);
+        text-shadow: none;
+    }
+    .inactivePage {
+        display: none;
+    }
+}

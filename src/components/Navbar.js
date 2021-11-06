@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import '../css/navbar.css'
+import "fullpage.js/vendors/scrolloverflow";
+import ReactFullpage from "@fullpage/react-fullpage";
 
-const Navbar = () => {
+const Navbar = (props) => {
     const [dimensions, setDimensions] = useState({
         height: window.innerHeight,
         width: window.innerWidth
@@ -23,20 +25,21 @@ const Navbar = () => {
         }
     })
 
-    return (<div>
+    return (
+    <div>
         { dimensions.width > 480 &&
             <div className="holderButton">
-            <div className="button">
-                <p>HOME</p>
+            <div className="button" onClick={() => props.moveToOne(1)}>
+                <p>Home</p>
             </div>
-            <div className="button">
-                <p>PLANETS</p>
+            <div className="button" onClick={() => props.moveToTwo(2)}>
+                <p>Planets</p>
             </div>
-            <div className="button">
-                <p>ACHIEVEMENTS</p>
+            <div className="button" onClick={() => props.moveToThree(3)}>
+                <p>Lovefinderrz</p>
             </div>
-            <div className="button">
-                <p>SHOP</p>
+            <div className="button" onClick={() => props.moveToFour(4)}>
+                <p>Rick's Shop</p>
             </div>
         </div>
     } 

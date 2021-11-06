@@ -1,16 +1,28 @@
 /* =============== CLASSES =============== */
 
 
-.interfaceTinder {
+.tinderTitle{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    right: 10;
+    margin: 50px;
+    color: var(--rick-text);
+    text-shadow: 2px 0 0 var(--rick-border), -2px 0 0 var(--rick-border),0 2px 0 var(--rick-border),0 -2px 0 var(--rick-border), 1px 1px 0 var(--rick-border), -1px -1px 0 var(--rick-border),1px -1px 0 var(--rick-border),-1px 1px 0 var(--rick-border);
+    font-family: var(--rick-font);
+    font-size: 60px;
+}
+
+.interfaceTinder {
     width: 350px;
     height: 600px;
-    background-color: #fffafa;
-    border: 0.5px solid gray;
+    background-color: var(--rick-text);
     border-radius: 3px;
+    position: absolute;
+    opacity: 85%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border: 2px solid var(--rick-border);
 }
 
 .holderTinder {
@@ -36,11 +48,11 @@
 }
 
 .imgTinder {
-    max-width: 65%;
+    max-width: 100%;
 }
 
 .icon {
-    color: var(--first-color-darker);
+    color: var(--text-color);
     font-size: 26px;
     margin: 4%;
     cursor: pointer;
@@ -84,20 +96,23 @@
 
 .resumeProfil > h3 {
     font-family: var(--title-font);
-    color: var(--first-color-darker);
+    color: var(--text-color);
     white-space: nowrap;
+    text-shadow: 1px 1px var(--second-color-flashy);
 }
 
 .resumeProfil > div > h3 {
     font-family: var(--title-font);
-    color: var(--first-color-darker);
+    color: var(--text-color);
     white-space: nowrap;
+    text-shadow: 1px 1px var(--second-color-flashy);
 }
 
 .resumeProfil > p {
     font-family: var(--title-font);
-    color: var(--first-color-darker);
+    color: var(--text-color);
     font-weight: lighter;
+    text-shadow: 1px 1px var(--second-color-flashy);
 }
 
 /* Footer Tinder */
@@ -121,7 +136,7 @@
     width: 65px;
     text-align: center;
     padding: 4px;
-    margin-top: 10px;
+    margin-top: 4px;
     cursor: pointer;
 }
 
@@ -134,35 +149,148 @@
     width: 65px;
     text-align: center;
     padding: 8px;
-    margin-top: 10px;
+    margin-top: 4px;
     cursor: pointer;
 }
 
-.iconStar {
-    color: rgb(44, 124, 199);
-    font-size: 26px;
-    border-radius: 50%;
-    border: 5px solid #ece5e5;
-    height: 50px;
+.chatbox {
+    width: 350px;
+    height: 600px;
+    background-color: #16acc98f;
+    border-radius: 3px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 65%;
+    border: 2px solid var(--rick-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    opacity: 0;
+    animation: 1s fadeIn 1s forwards;
+}
+
+.headerChat {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 5%;
+    border-bottom: solid #eee7e7;
+    border-bottom-width: 0.1em;
+}
+
+.imgPurpose > img {
+    border-radius: 70px;
+    opacity: 0.95;
+    width: 60px;
+    height: 60px;
+}
+
+.resumeChat {
+    margin-left: 15px;
+    font-family: var(--title-font);
+    text-shadow: 1px 1px var(--second-color-flashy);
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.chat {
+    height: 400px;
+    width: 100%;
+    border-bottom: solid #eee7e7;
+    border-bottom-width: 0.1em;
+}
+
+.chatArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+.buttonSend button{
+    background-color: white;
+    font-family: var(--text-font);
     width: 50px;
-    text-align: center;
-    padding: 6px;
-    cursor: pointer;
+    padding-bottom: 2px;
+    border-radius: 10px;
+    border: 2px solid var(--rick-border);
 }
 
-.iconRedo {
-    color: #dada29e6;
-    font-size: 26px;
-    border-radius: 50%;
-    border: 5px solid #ece5e5;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    padding: 7px;
-    cursor: pointer;
+.chatArea input{
+    background-color: white;
+    font-family: var(--text-font);
+    padding-bottom: 3px;
+    border-radius: 10px;
+    width: 200px;
+    border: 2px solid var(--rick-border);
 }
 
+.matching > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: match 4s forwards;
+    transition: ease-in;
+}
 
+.left {
+    animation: movingLeft 1s forwards;
+}
+
+.message {
+    background-color: var(--first-color-darker);
+    margin: 2%;
+    border-radius: 6px;
+    padding: 4px;
+    overflow: hidden;
+}
+
+.message > p {
+    font-family: var(--title-font);
+    color: var(--text-color);
+    font-weight: lighter;
+    text-shadow: 1px 1px var(--second-color-flashy);
+}
+
+@keyframes movingLeft {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 35%;
+    }
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes match {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1)
+    }
+    25% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1.5)
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(2)
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1)
+    }
+}
 
 
 

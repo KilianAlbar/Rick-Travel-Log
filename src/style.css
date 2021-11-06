@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+@font-face 
+{
+  font-family: "GetSchwifty";
+  src: local("get-schwhifty"), url("./fonts/get-schwifty.ttf") format("truetype");
+  font-weight: bold;
+}
 
 /* =============== VARIABLE =============== */
 
@@ -10,11 +17,14 @@
   --second-color-flashy: #42ca20;
   --text-color: #F8F7FF;
   --container-color: #9998A3;
+  --rick-text: #00a4c0;
+  --rick-border: #cceb83;
 
   /* fonts */
 
-  --title-font: 'Nunito', sans-serif;
-  --text-font: 'Open Sans Condensed', sans-serif;
+  --title-font: 'Zen Kurenaido', sans-serif;
+  --text-font: 'Zen Kurenaido', sans-serif;
+  --rick-font: 'GetSchwifty';
 
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -79,6 +89,10 @@
   margin: 0;
 }
 
+.fullpage-wrapper{
+  cursor: url(./assets/gunCursor.png), auto;
+}
+
 ul {
   list-style: none;
 }
@@ -107,7 +121,7 @@ img {
 }
 
 #slide3 {
-  background-image: url(./assets/background.png);
+  background-image: url(./assets/backgroundDetails.jpeg);
   background-size: cover;
 }
 
@@ -126,6 +140,10 @@ img {
   background-size: cover;
 }
 
+.fp-controlArrow{
+  display: none !important;
+}
+
 .testDiv {
   position: absolute;
   top: 15%;
@@ -140,4 +158,14 @@ img {
 button {
   cursor: pointer;
   z-index: 1000;
+}
+
+.componentsBtn{
+    font-family: 'Zen Kurenaido', sans-serif;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--rick-border);
+    padding: var(--mt-2);
+    font-size: 35px;
+    cursor: pointer;
 }

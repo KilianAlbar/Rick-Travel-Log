@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
 /* =============== CLASSES =============== */
 
 .holderButton {
@@ -13,12 +15,13 @@
 }
 
 .button {
-    font-family: var(--title-font);
-    color: var(--text-color);
+    font-family: 'Zen Kurenaido', sans-serif;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--rick-border);
     padding: var(--mt-2);
-    font-size: var(--h1-font-size);
+    font-size: 35px;
     cursor: pointer;
-    text-shadow: var(--second-color-flashy) 2px 0 40px;
 }
 
 .button:hover {

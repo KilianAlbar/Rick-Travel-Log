@@ -1,5 +1,12 @@
 # Rick-Travel-Log
 Projet 2 - Site React + API
+================================================================
+
+06/11/2021
+
+- Finalisation du site :
+- Navbar fonctionnelle
+- Ajout des composants TinderRick et Shop
 
 ================================================================
 

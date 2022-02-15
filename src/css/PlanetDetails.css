@@ -130,6 +130,10 @@
     
 }
 
+.charaName{
+    text-align: center;
+}
+
 .boldText{
     font-weight: bold;
 }

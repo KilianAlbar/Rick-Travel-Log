@@ -103,6 +103,7 @@ function PlanetDetails(props){
                                 <img src={chara.image}/>
                                 <div className="charaTooltip">
                                     <ul>
+                                        <li><span className="boldText charaName"> {chara.name}</span></li>
                                         <li><span className="boldText">Gender:</span> {chara.gender}</li>
                                         <li><span className="boldText">Species:</span> {chara.species}</li>
                                         <li><span className="boldText">Status:</span> {chara.status}</li>

@@ -16,6 +16,7 @@
 	bottom: 0;
 	left: 0;
 	margin-bottom: 200px;
+	margin-left:20px;
 }
 
 .shop-cart button {
@@ -62,4 +63,21 @@
 	border-radius: 50%;
 	border: 2px solid black;
 	margin-bottom: 10px;
+}
+
+.cleanBasket{
+	color:black;
+	font-family: var(--text-font);
+	background-color: #4CAF50;
+	border: 1px solid black !important;
+	padding:7px;
+	text-align: center;
+	opacity: 0.6;
+	transition: 0.3s;
+	cursor:pointer;
+	border-radius: 8px !important;
+}
+
+.cleanBasket:hover{
+	opacity:1;
 }

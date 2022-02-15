@@ -28,7 +28,7 @@ function Cart({cart, updateCart}) {
 						))}
 					</ul>
 					<h3>Total:{total} crédits galactiques</h3>
-					<button onClick={() => updateCart([])}> Vider le panier</button>
+					<button className="cleanBasket" onClick={() => updateCart([])}> Vider le panier</button>
 
 			</div>
 
